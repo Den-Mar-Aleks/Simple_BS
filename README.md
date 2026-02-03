@@ -13,6 +13,14 @@ pipeline_tag: text-to-image
 
 ---
 
+## ⚡ Quick Links
+
+| Version | Weights | Preview |
+|--------|---------|---------|
+| **Main** | [/model/Simple_BS.safetensors](https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/Simple_BS.safetensors) | <img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14-15.png" width="120"> <img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14.png" width="120"> |
+
+---
+
 ## 🔍 Overview
 **Simple_BS** is a stylized body-geometry LoRA that modifies **only the artistic volume of the upper body**.  
 It adjusts the **shape and silhouette of the chest area** while keeping all realism-critical traits unchanged:
@@ -71,13 +79,6 @@ the LoRA handles stylization automatically.
 
 ---
 
-## ⚡ Quick Links
-
-| Version | Weights | Preview |
-|--------|---------|---------|
-| **Main** | [/model/Simple_BS.safetensors](https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/Simple_BS.safetensors) | <img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14-15.png" width="120"> <img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14.png" width="120"> |
-
----
 
 ## 🧾 License
 **CreativeML OpenRAIL-M**
