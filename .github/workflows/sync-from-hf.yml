@@ -1,0 +1,48 @@
+name: "[AUTO] Sync HF to GH (Simple_BS)"
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub repo (no LFS)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: false
+          persist-credentials: true
+
+      - name: Setup Git LFS
+        run: |
+          git lfs install
+
+      - name: Add Hugging Face remote and fetch
+        run: |
+          git remote add hf https://huggingface.co/dmsnoa/Simple_BS.git || true
+          git fetch hf --prune
+
+      - name: Pull LFS objects from Hugging Face
+        run: |
+          git lfs fetch hf --all
+          git lfs checkout
+
+      - name: Merge HF main into GitHub main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout main
+          git merge --no-edit hf/main
+
+      - name: Push to GitHub (use GITHUB_TOKEN)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          git push origin main
