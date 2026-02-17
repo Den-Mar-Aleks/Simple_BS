@@ -15,11 +15,26 @@ pipeline_tag: text-to-image
 
 ## ⚡ Quick Links
 
-| Version | Weights | Preview |
-|--------|---------|---------|
-| **Main** | [/model/Simple_BS.safetensors](https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/Simple_BS.safetensors) | <img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14-15.png" width="120"> <img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14.png" width="120"> |
+<table>
+<tr>
+
+<td width="50%" valign="top">
+
+### Main  
+[Download Weights](https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/Simple_BS.safetensors)
+
+<br>
+
+<img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14-15.png" width="220"><br>
+<img src="https://huggingface.co/dmsnoa/Simple_BS/resolve/main/model/2026-01-14.png" width="220">
+
+</td>
+
+</tr>
+</table>
 
 ---
+
 
 ## 🔍 Overview
 **Simple_BS** is a stylized body-geometry LoRA that modifies **only the artistic volume of the upper body**.  
